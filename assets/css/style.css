@@ -1,0 +1,130 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+header .logo {
+    font-size: 23px;
+    font-weight: bold;
+    color: #fff;
+}
+header .menu {
+    width: 30px;
+    height: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+header .menu-line {
+    height: 3px;
+    background-color: #333;
+}
+
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+.container .leftside {
+    flex: 1;
+    background-color: #3b576d;
+    display: flex;
+    align-items: center;
+    padding: 0px 20px;
+}
+.container .rightside {
+    flex: 1;
+    background-image: url(../image/hero.jpg);
+    background-size: cover;
+    background-position: center top;
+}
+.container .info {
+    color: #fff;
+}
+.container .info .profession {
+    font-size: 19px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.container .info .name {
+    font-size: 80px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.container .info .buttons a {
+    display: inline-block;
+    color: #3b576d;
+    background-color: #fff;
+    padding: 20px 40px;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: 0px 0px 10px #222;
+    border-radius: 5px;
+}
+.container .info .buttons a.light {
+    color: #fff;
+    background-color: #608099;
+}
+.container .info .buttons a:hover {
+    opacity: 0.75;
+}
+
+footer {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 20px;
+    font-size: 13px;
+    color: #fff;
+}
+
+
+@media(max-width:850px) {
+    header {
+        position: initial;
+        background-color: #3b576d;
+    }
+    header .menu-line {
+        background-color: #fff;
+    }
+    .container {
+        flex-direction: column;
+    }
+    .container .leftside {
+        flex: none;
+        padding: 30px 20px;
+        justify-content: center;
+        text-align: center;
+    }
+    footer {
+        position: initial;
+        font-size: 15px;
+        color: #333;
+        text-align: center;
+    }
+}
+@media(max-width:450px) {
+    .container info .profession {
+        font-size: 17px;
+    }
+    .container .info .name {
+        font-size: 50px;
+    }
+    .container .info .buttons a {
+        display: block;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
